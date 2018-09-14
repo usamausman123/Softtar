@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<fieldset>
+    <lagend>Employee details</lagend>
+    @using (Ajax.BeginForm("ShowEmployeeData", "Employee", new AjaxOptions { UpdateTargetId = "empDetails" }))
+{
+    <div id="empDetails">
+    </div>
+        <ol>
+            <li>
+                @Html.Label("Employee Name")
+                @Html.TextBox("name")
+            </li>
+            <li>
+                @Html.Label("Employee id")
+                @Html.TextBox("id")
+            </li>
+            <li>
+                @Html.Label("Employee Salary")
+                @Html.TextBox("salary")
+            </li>
+        </ol>
+        <button type="submit" id ="showData"> Submit</button>
+}
+</fieldset>
+
+

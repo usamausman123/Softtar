@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 #{title}
+    ul.list-group
+        each teacher , i in art
+            li.list-group-item    
+                a(href="/teacher/"+ teacher._id)= (i+1) + ' : ' + teacher.f_name + ' ' +  teacher.l_name                        
+            <!--p= (i+1) + ' : ' + teacher.title-->
+            

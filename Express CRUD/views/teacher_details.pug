@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    br 
+    br 
+    br 
+    br
+    table.table.table-hover.table-bordered
+        thead.thead-dark
+            tr
+                th(scope='col' colspan = '2') 
+                    center 
+                        h2 Personal Details
+        tbody
+            tr
+                th(scope='row') First Name
+                td #{teacher.f_name}
+            tr
+                th(scope='row') Last Name
+                td #{teacher.l_name}
+            tr
+                th(scope='row') Age
+                td #{teacher.age}
+            tr  
+                th(scope='row') Subject
+                td #{teacher.subject}
+    hr
+    a.btn.btn-outline-success(href='/teacher/edit/'+teacher._id) Update 
+    a.btn.btn-outline-danger.delete-teacher(href='#',data-id=teacher._id) Delete

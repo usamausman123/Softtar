@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    br
+    br
+    h1 #{title}
+    form(method='POST', action='/teachers/edit/'+teacher._id)
+        .form-group
+            label First Name : 
+            input.form-control(name='f_name' type='text' , value=teacher.f_name)
+        .form-group
+            label Last Name : 
+            input.form-control(name='l_name' type='text' , value=teacher.l_name)
+        .form-group
+            label Age : 
+            input.form-control(name='age' type='text' , value=teacher.age)
+        .form-group
+            label Subject : 
+            input.form-control(name='subject' type='text' , value=teacher.subject)
+        input.btn.btn-primary(type='submit', value='Submit')
